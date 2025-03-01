@@ -16,11 +16,16 @@ calculadora.post('/' , (req,res)=>{
   res.send("O resultado da operação é: "+ soma )
 })
 
-calculadora.post('/' , (req,res)=>{
-  const n1 = Number(req.body.numb1)
-  const n2 = Number(req.body.numb2)
+calculadora.use(bodyparser.urlencoded({extended:true}))
+calculadora.get('/Subtracao', (req,res) =>{
+  res.sendFile(__dirname + "/index.html")
+})
 
-  const subtrair = n1 - n2
+calculadora.post('/Subtracao' , (req,res)=>{
+  const n3 = Number(req.body.num3)
+  const n4 = Number(req.body.num4)
+
+  const subtrair = n3 + n4
   res.send("O resultado da operação é: "+ subtrair )
 })
 
