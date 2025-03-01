@@ -13,7 +13,7 @@ calculadora.post('/' , (req,res)=>{
   const n2 = Number(req.body.num2)
 
   const soma = n1 + n2
-  res.send(<h1>"O resultado da operação é: "+ soma +</h1>)
+  res.send("O resultado da operação é: "+ soma )
 })
 
 
