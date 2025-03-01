@@ -17,10 +17,10 @@ calculadora.post('/' , (req,res)=>{
 })
 
 calculadora.post('/' , (req,res)=>{
-  const n3 = Number(req.body.num3)
-  const n4 = Number(req.body.num4)
+  const n1 = Number(req.body.num1)
+  const n2 = Number(req.body.num2)
 
-  const subtrair = n3 - n4
+  const subtrair = n1 - n2
   res.send("O resultado da operação é: "+ subtrair )
 })
 
