@@ -17,8 +17,8 @@ calculadora.post('/' , (req,res)=>{
 })
 
 calculadora.post('/' , (req,res)=>{
-  const n1 = Number(req.body.num1)
-  const n2 = Number(req.body.num2)
+  const n1 = Number(req.body.numb1)
+  const n2 = Number(req.body.numb2)
 
   const subtrair = n1 - n2
   res.send("O resultado da operação é: "+ subtrair )
