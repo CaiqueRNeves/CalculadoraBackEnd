@@ -3,37 +3,36 @@ const express = require('express');
 const calculadora = express();
 const bodyparser = require('body-parser');
 
-calculadora.use(bodyparser.urlencoded({extended:true}))
-calculadora.get('/', (req,res) =>{
-  res.sendFile(__dirname + "/index.html")
-})
+calculadora.use(bodyparser.urlencoded({extended: true}));
 
-calculadora.post('/' , (req,res)=>{
-  const n1 = Number(req.body.num1)
-  const n2 = Number(req.body.num2)
+calculadora.get('/', (req, res) => {
+  res.sendFile(__dirname + "/index.html");
+});
 
-  const soma = n1 + n2
-  res.send("O resultado da operação é: "+ soma )
-})
+calculadora.post('/', (req, res) => {
+  const n1 = Number(req.body.num1);
+  const n2 = Number(req.body.num2);
+  
+  const soma = n1 + n2;
+  res.send("O resultado da operação é: " + soma);
+});
 
-calculadora.use(bodyparser.urlencoded({extended:true}))
-calculadora.get('/Subtracao', (req,res) =>{
-  res.sendFile(__dirname + "/index.html")
-})
+calculadora.get('/subtracao', (req, res) => {
+  res.sendFile(__dirname + "/index.html");
+});
 
-calculadora.post('/Subtracao' , (req,res)=>{
-  const n3 = Number(req.body.num3)
-  const n4 = Number(req.body.num4)
+calculadora.post('/subtracao', (req, res) => {
+  const n1 = Number(req.body.num1);
+  const n2 = Number(req.body.num2);
+  
+  const subtracao = n1 - n2;
+  res.send("O resultado da operação é: " + subtracao);
+});
 
-  const Subtracao = n3 - n4
-  res.send("O resultado da operação é: "+ Subtracao )
-})
-
-
-calculadora.listen(8080 , (erro) => {
-  if(erro){
-    console.log("Servidor foi pro ralo!")
-  }else{
-    console.log("Servidor tá ok!")
+calculadora.listen(8080, (erro) => {
+  if(erro) {
+    console.log("Erro ao iniciar servidor:", erro);
+  } else {
+    console.log("Servidor iniciado com sucesso na porta 8080!");
   }
-})
+});
