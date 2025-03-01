@@ -5,7 +5,7 @@ const bodyparser = require('body-parser');
 
 calculadora.use(bodyparser.urlencoded({extended:true}))
 calculadora.get('/', (req,res) =>{
-  res.send('Olá, Mundo!')
+  res.sendFile(__dirname + "/index.html")
 })
 
 
