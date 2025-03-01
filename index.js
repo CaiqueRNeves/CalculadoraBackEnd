@@ -25,8 +25,8 @@ calculadora.post('/Subtracao' , (req,res)=>{
   const n3 = Number(req.body.num3)
   const n4 = Number(req.body.num4)
 
-  const subtrair = n3 + n4
-  res.send("O resultado da operação é: "+ subtrair )
+  const Subtracao = n3 - n4
+  res.send("O resultado da operação é: "+ Subtracao )
 })
 
 
