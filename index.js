@@ -16,6 +16,14 @@ calculadora.post('/' , (req,res)=>{
   res.send("O resultado da operação é: "+ soma )
 })
 
+calculadora.post('/' , (req,res)=>{
+  const n3 = Number(req.body.num3)
+  const n4 = Number(req.body.num4)
+
+  const subtrair = n3 - n4
+  res.send("O resultado da operação é: "+ subtrair )
+})
+
 
 calculadora.listen(8080 , (erro) => {
   if(erro){
