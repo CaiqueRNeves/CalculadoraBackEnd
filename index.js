@@ -8,7 +8,13 @@ calculadora.get('/', (req,res) =>{
   res.sendFile(__dirname + "/index.html")
 })
 
+calculadora.post('/' , (req,res)=>{
+  const n1 = req.body.num1
+  const n2 = req.body.num2
 
+  const soma = n1+ n2
+  res.send("O resultado da operação é: "+ soma)
+})
 
 
 calculadora.listen(8080 , (erro) => {
