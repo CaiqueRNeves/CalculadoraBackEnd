@@ -34,6 +34,18 @@ calculadora.post('/subtracao', (req, res) => {
   res.send("O resultado da operação é: " + subtracao);
 });
 
+calculadora.get('/Multiplicacao', (req, res) => {
+  res.sendFile(__dirname + "/index.html");
+});
+
+calculadora.post('/Multiplicacao', (req, res) => {
+  const n1 = Number(req.body.num1);
+  const n2 = Number(req.body.num2);
+  
+  const multiplicacao = n1 * n2;
+  res.send("O resultado da operação é: " + multiplicacao);
+});
+
 // Iniciar o servidor
 calculadora.listen(8080, (erro) => {
   if(erro) {
