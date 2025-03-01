@@ -56,7 +56,7 @@ calculadora.post('/multiplicacao', (req, res) => {
   const multiplicacao = n1 * n2;
   res.send(`
     <h2>Resultado da Multiplicação</h2>
-    <p>${n1} × ${n2} = ${multiplicacao}</p>
+    <p>${n1} * ${n2} = ${multiplicacao}</p>
     <a href="/">Voltar para a calculadora</a>
   `);
 });
