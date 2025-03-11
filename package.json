@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "express": "^4.21.2",
-    "intellisense": "^0.0.1"
+    "intellisense": "^0.0.1",
+    "nodemon": "^3.1.9"
   }
 }
